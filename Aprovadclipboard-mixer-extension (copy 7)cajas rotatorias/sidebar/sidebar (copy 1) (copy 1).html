@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Información</title>
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+  <div id="app">
+    <div id="fixed-frame">
+      <select id="profile-selector">
+        <option value="default">Default</option>
+        <option value="new">Añadir nuevo perfil</option>
+      </select>
+      <button id="renameProfileBtn" title="Renombrar perfil actual">R</button>
+      <button id="combineBtn" title="Combinar Información">C</button>
+    </div>
+    <div id="all-boxes">
+      <div id="dynamic-boxes"></div>
+      <div id="selected-text-container" class="text-container" draggable="true">
+        <div class="textarea-wrapper">
+          <textarea id="selected-text" placeholder="Texto Seleccionado" readonly></textarea>
+          <div class="button-checkbox">
+            <button class="paste-btn" title="Pegar">P</button>
+            <button class="clear-btn" title="Borrar">B</button>
+            <input type="checkbox" id="include-selected" checked>
+            <input type="checkbox" class="single-use" title="Un solo uso">
+            <input type="checkbox" class="append-mode" title="Modo Append">
+          </div>
+        </div>
+      </div>
+      <div id="clipboard-content-container" class="text-container" draggable="true">
+        <div class="textarea-wrapper">
+          <textarea id="clipboard-content" placeholder="Contenido del Portapapeles" readonly></textarea>
+          <div class="button-checkbox">
+            <button class="paste-btn" title="Pegar">P</button>
+            <button class="clear-btn" title="Borrar">B</button>
+            <input type="checkbox" id="include-clipboard" checked>
+            <input type="checkbox" class="single-use" title="Un solo uso">
+            <input type="checkbox" class="append-mode" title="Modo Append">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="sidebar.js"></script>
+</body>
+</html>

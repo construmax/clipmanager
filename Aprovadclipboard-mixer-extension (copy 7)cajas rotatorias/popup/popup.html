@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mezclador de Portapapeles</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <div id="header">
+      <h1>Mezclador de Portapapeles</h1>
+      <button id="alwaysOnTopBtn">Always on Top</button>
+    </div>
+    <div class="text-container">
+      <textarea id="text1" placeholder="Texto 1"></textarea>
+      <button class="paste-btn" data-index="0">P</button>
+    </div>
+    <div class="text-container">
+      <textarea id="text2" placeholder="Texto 2"></textarea>
+      <button class="paste-btn" data-index="1">P</button>
+    </div>
+    <div class="text-container">
+      <textarea id="text3" placeholder="Texto 3"></textarea>
+      <button class="paste-btn" data-index="2">P</button>
+    </div>
+    <button id="combineBtn">Copiar Textos Combinados</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

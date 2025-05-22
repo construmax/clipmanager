@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Información Avanzado</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="control-panel">
+            <select id="profile-selector">
+                <option value="default">Default</option>
+                <option value="new">Añadir nuevo perfil</option>
+            </select>
+            <button id="rename-profile-btn">R</button>
+            <button id="combine-btn">C</button>
+            <button id="add-box-btn">Agregar caja</button>
+            <button id="settings-btn">⚙️</button>
+        </div>
+
+        <div id="content-area">
+            <div id="selected-text-box" class="text-box">
+                <input type="text" class="box-title" value="Selección">
+                <textarea></textarea>
+                <div class="controls">
+                    <button class="paste-btn">P</button>
+                    <button class="clear-btn">B</button>
+                    <input type="checkbox" class="append-mode-check">
+                    <input type="checkbox" class="copy-check">
+                    <input type="checkbox" class="no-copy-check">
+                </div>
+            </div>
+
+            <div id="clipboard-box" class="text-box">
+                <input type="text" class="box-title" value="Portapapeles">
+                <textarea></textarea>
+                <div class="controls">
+                    <button class="paste-btn">P</button>
+                    <button class="clear-btn">B</button>
+                    <input type="checkbox" class="append-mode-check">
+                    <input type="checkbox" class="copy-check">
+                    <input type="checkbox" class="no-copy-check">
+                </div>
+            </div>
+
+            <div id="dynamic-boxes"></div>
+        </div>
+    </div>
+
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <h2>Configuración</h2>
+            <label>
+                <input type="checkbox" id="dark-mode-toggle">
+                Modo oscuro
+            </label>
+            <button id="add-fixed-box-btn">Añadir caja fija</button>
+            <button id="add-rotating-box-btn">Añadir caja rotatoria</button>
+            <button id="save-settings">Guardar</button>
+            <button id="close-settings">Cerrar</button>
+        </div>
+    </div>
+
+    <button id="copy-logs-btn">Copiar Logs</button>
+
+    <script src="sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#control-panel {
+    margin-bottom: 10px;
+}
+
+.text-box {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .text-box {
+    border-color: #555;
+    background-color: #444;
+}
+
+.box-title {
+    width: 100%;
+    margin-bottom: 5px;
+    cursor: move;
+}
+
+textarea {
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode textarea {
+    background-color: #555;
+    color: #fff;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    margin-right: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.sortable-ghost {
+    opacity: 0.5;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.dark-mode .modal-content {
+    background-color: #444;
+    color: #fff;
+}
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
